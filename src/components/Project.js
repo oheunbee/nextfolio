@@ -4,19 +4,43 @@ import Image from 'next/image';
 const projectData = [
   {
     id: 1,
-    title: 'Project A',
+    title: 'ReframePoint',
     date: '2023.01 - 2023.03',
     description: '사용자의 생산성 극대화에 초점을 맞춘 웹 애플리케이션입니다.',
     tags: ['React', 'Node.js', 'Tailwind CSS'],
-    image: '/images/project-a.png',
+    image: '/reframe.png',
+    macImage: '/reframeD.png',
+    phoneImage: '/reframeM.png',
   },
   {
     id: 2,
+    title: 'Studio Moona',
+    date: '2023.04 - 2023.06',
+    description: '실시간 데이터 시각화를 제공하는 관리자 대시보드입니다. 이 설명은 다른 프로젝트보다 조금 더 길어서 레이아웃이 어떻게 유지되는지 테스트하기 좋습니다.',
+    tags: ['Vue.js', 'Firebase', 'Chart.js'],
+    image: '/moona.png',
+    macImage: '/moonaD.png',
+    phoneImage: '/moonaM.png',
+  },
+  {
+    id: 3,
+    title: 'About-Youth',
+    date: '2023.04 - 2023.06',
+    description: '실시간 데이터 시각화를 제공하는 관리자 대시보드입니다. 이 설명은 다른 프로젝트보다 조금 더 길어서 레이아웃이 어떻게 유지되는지 테스트하기 좋습니다.',
+    tags: ['Vue.js', 'Firebase', 'Chart.js'],
+    image: '/about.png',
+    macImage: '/aboutD.png',
+    phoneImage: '/aboutM.png',
+  },
+  {
+    id: 4,
     title: 'Project B',
     date: '2023.04 - 2023.06',
     description: '실시간 데이터 시각화를 제공하는 관리자 대시보드입니다. 이 설명은 다른 프로젝트보다 조금 더 길어서 레이아웃이 어떻게 유지되는지 테스트하기 좋습니다.',
     tags: ['Vue.js', 'Firebase', 'Chart.js'],
     image: '/images/project-b.png',
+    macImage: '/reframeD.png',
+    phoneImage: '/reframeM.png',
   },
 ];
 
@@ -45,13 +69,13 @@ const Project = ({ onOpenModal }) => {
       {activeProject && (
         <div className="bg-white rounded-2xl shadow-xl w-full max-w-5xl p-8 pt-12 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center h-[420px]">
-            <div className="w-full h-full bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+            <div className="w-full h-full bg-white rounded-lg flex items-center justify-center p-6 shadow-inner">
               <Image
                 width={500}
                 height={420}
                 src={activeProject.image} 
-                alt={`${activeProject.title} screenshot`} 
-                className="w-full h-full object-cover"
+                alt={`${activeProject.title} screenshot`}
+                className="w-auto h-auto max-w-full max-h-full [filter:drop-shadow(0_0_1.5px_rgba(0,0,0,0.8))]"
                 priority
               />
             </div>

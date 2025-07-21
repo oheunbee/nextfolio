@@ -35,7 +35,7 @@ const About = () => {
           <Image
             width={200}
             height={200}
-            src="/profile.png"
+            src="/profile.jpg"
             alt="오은비 프로필"
             className="w-40 h-40 rounded-full object-cover bg-gray-200 ring-4 ring-gray-200"
           />
@@ -66,7 +66,7 @@ const About = () => {
               사용자 경험을 최우선으로 생각하며, 직관적이고 효율적인 웹 솔루션을 만드는 데 열정을 가진 프론트엔드 개발자입니다. 복잡한 문제를 단순하게 풀고, 동료들과의 협업을 통해 함께 성장하는 과정에서 큰 보람을 느낍니다.
             </p>
           </div>
-          
+
           <div className="border-t border-gray-200"></div>
 
           <div className="space-y-6">
