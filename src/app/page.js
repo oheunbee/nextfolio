@@ -2,8 +2,8 @@
 
 import { useState, useRef, useEffect } from 'react';
 import About from "../components/About";
-import ProjectsSection from "@/components/ProjectsSection";
-import ProjectModal from '@/components/projects/ProjectModal'; 
+import Project from "@/components/Project";
+import ProjectModal from '@/components/ProjectModal'; 
 
 const ANIMATION_DURATION = 1200;
 
@@ -12,9 +12,9 @@ export default function Home() {
   const isThrottled = useRef(false);
   const totalSections = 3;
 
+  // --- 모달 상태를 여기서 직접 관리합니다 ---
   const [modalProject, setModalProject] = useState(null);
   const modalProjectRef = useRef(modalProject);
-
   modalProjectRef.current = modalProject;
 
   const openModal = (project) => {
@@ -47,12 +47,13 @@ export default function Home() {
     };
     
     window.addEventListener('wheel', handleWheel);
-
+    
     return () => window.removeEventListener('wheel', handleWheel);
-  }, []); 
+  }, []);
 
   return (
     <main className="relative h-screen w-full overflow-hidden">
+      {/* 스크롤 애니메이션을 위한 div */}
       <div
         className="h-full w-full transition-transform ease-in-out"
         style={{
@@ -60,7 +61,7 @@ export default function Home() {
           transform: `translateY(-${currentSectionIndex * 100}vh)`,
         }}
       >
-
+        {/* --- 섹션 1: 메인 --- */}
         <section className="h-screen w-full">
           <div className='w-full h-full bg-stone-100 relative'>
             <div className="absolute inset-0 flex items-center justify-center"><h1 className="text-8xl font-bold">PORTFOLIO</h1></div>
@@ -69,19 +70,22 @@ export default function Home() {
           </div>
         </section>
 
+        {/* --- 섹션 2: About --- */}
         <section className="h-screen w-full">
           <About />
         </section>
 
+        {/* --- 섹션 3: Projects --- */}
         <section className="h-screen w-full">
-          <ProjectsSection onOpenModal={openModal} />
+          {/* Project 컴포넌트에 모달을 여는 함수를 prop으로 전달 */}
+          <Project onOpenModal={openModal} />
         </section>
       </div>
 
+      {/* 모달 렌더링을 transform이 적용된 div 바깥으로 이동 */}
       {modalProject && (
         <ProjectModal project={modalProject} onClose={closeModal} />
       )}
     </main>
-
   );
 }
