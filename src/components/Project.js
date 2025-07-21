@@ -44,12 +44,11 @@ const Project = ({ onOpenModal }) => {
 
       {activeProject && (
         <div className="bg-white rounded-2xl shadow-xl w-full max-w-5xl p-8 pt-12 md:p-12">
-          {/* --- CHANGE: 높이를 420px로 줄여 더 컴팩트한 크기로 조정합니다. --- */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center h-[420px]">
             <div className="w-full h-full bg-gray-100 rounded-lg overflow-hidden shadow-lg">
               <Image
                 width={500}
-                height={420} // 컨테이너 높이에 맞춰 수정
+                height={420}
                 src={activeProject.image} 
                 alt={`${activeProject.title} screenshot`} 
                 className="w-full h-full object-cover"
