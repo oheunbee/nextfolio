@@ -34,7 +34,7 @@ const projectData = [
   },
   {
     id: 4,
-    title: 'Project B',
+    title: 'MINUMSA',
     date: '2023.04 - 2023.06',
     description: '실시간 데이터 시각화를 제공하는 관리자 대시보드입니다. 이 설명은 다른 프로젝트보다 조금 더 길어서 레이아웃이 어떻게 유지되는지 테스트하기 좋습니다.',
     tags: ['Vue.js', 'Firebase', 'Chart.js'],

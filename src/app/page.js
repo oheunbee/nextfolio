@@ -60,7 +60,7 @@ export default function Home() {
         }}
       >
         <section className="h-screen w-full">
-          <div className='w-full h-full bg-stone-100 relative'>
+          <div className='w-full h-full bg-gray-50 relative'>
             <div className="absolute inset-0 flex items-center justify-center"><h1 className="text-8xl font-bold">PORTFOLIO</h1></div>
             <div className="absolute bottom-0 left-0 w-full p-8 md:p-12"><div className="flex items-center gap-4"><div className="flex-grow h-px bg-black"></div><span className="text-sm font-semibold tracking-widest uppercase">OH EUNBEE</span></div></div>
             <div className="absolute top-0 right-0 bottom-0 p-8 md:p-12"><div className="flex flex-col items-center gap-4 h-full pb-10"><span className="block text-sm font-semibold tracking-widest uppercase rotate-90 whitespace-nowrap">2025</span><div className="w-px bg-black flex-grow"></div></div></div>

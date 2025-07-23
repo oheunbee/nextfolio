@@ -22,9 +22,9 @@ const SkillSection = ({ title, skills }) => (
 const About = () => {
   const skills = {
     languages: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3'],
-    frameworks: ['React', 'Next.js', 'Vue.js', 'Redux Toolkit', 'Zustand'],
-    styling: ['Tailwind CSS', 'Styled-components', 'Sass/SCSS', 'Figma'],
-    tools: ['Git', 'Webpack', 'Vercel', 'Firebase'],
+    frameworks: ['React', 'Next.js', 'ReactNative', 'Redux Toolkit', 'Zustand'],
+    styling: ['Tailwind CSS', 'Styled-components', 'Figma'],
+    tools: ['Git', 'supabase', 'Vercel', 'Firebase'],
   };
 
   return (
